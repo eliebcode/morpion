@@ -1,0 +1,129 @@
+/*
+Styles pour la grille de jeu de morpion
+
+
+    La classe "actif" est placée sur la div du joueur actif
+    Dans les case de jeu, on placera joueur1 ou joueur2 pour mettre le symbole d'un joueur
+
+
+
+*/
+
+body {
+    min-width: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.joueur {
+    display: block;
+    position: absolute;
+    top: 15px;
+    opacity: 0.4;  
+}
+
+.joueur.actif {
+    opacity: 1;
+}
+
+.joueur input {
+    padding: 7px;
+    margin-left: 10px;
+    position: relative;
+    top: -5px; 
+}
+
+.J1 {
+    left: 15px
+} 
+
+.J1 input {
+    color: blue;
+    border-color: blue; 
+
+}
+
+.J1::before {
+    content: "O";
+    color: blue;
+    font-weight: bold;
+    font-size: 2em
+}
+
+.J2 {
+    right: 15px; 
+}
+
+.J2 input {
+    color: red;
+    border-color: red; 
+}
+
+.J2::before {
+    content: "X";
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+
+td {
+    border: 1px solid black;
+    height: 70px;
+    width: 70px;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+
+.resultat, .new {
+    display: block;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.new {
+    font-size: 1.5em;
+}
+
+.resultat {
+    text-align: center;
+}
+
+
+/* Jouer les cases */
+
+td.joueur1::before {
+    content: "O";
+    color: blue;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+td.joueur2::before {
+    content: "X";
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+}
+
